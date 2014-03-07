@@ -1,0 +1,20 @@
+#pragma once
+
+#include "Copengl.h"
+#include "constImages.h"
+#include "Cloader.h"
+#include "CparticleController.h"
+#include "constBomb.h"
+
+class Cbomb {
+    public:
+    Cbomb(float x, float y);
+    BOMB::STEP step(Cloader &loader, CparticleController &particleController, std::vector<Cenemy*> &enemies, std::vector<Cbullet*> &bullets);
+    OPENGL::vanillaPoint* draw(Copengl &opengl, OPENGL::vanillaPoint* freeSpace);
+
+    private:
+    bool explode(Cloader &loader, CparticleController &particleController);
+    float x;
+    float y;
+    int life;
+};

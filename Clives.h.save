@@ -1,0 +1,14 @@
+#pragma once
+
+#include "Ctext.h"
+#include "constLives.h"
+#include "Copengl.h"
+#include "constImages.h"
+
+class Cscore {
+    public:
+    static OPENGL::vanillaPoint* draw(unsigned int lives, Copengl &opengl, OPENGL::vanillaPoint* freeSpace);
+
+    private:
+    //none
+};

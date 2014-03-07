@@ -1,0 +1,17 @@
+#pragma once
+
+#include "Ctext.h"
+#include "constScore"
+#include "Copengl.h"
+
+class Cscore {
+    public:
+    Cscore();
+    void add(unsigned int change);
+
+    unsigned long get_score();
+
+    private:
+    Ctext text;
+    unsigned long score;
+}

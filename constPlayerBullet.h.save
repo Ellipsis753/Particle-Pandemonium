@@ -1,0 +1,8 @@
+#pragma once
+
+#include "Copengl.h"
+
+namespace PLAYER_BULLET {
+    const float SPEED = Copengl::convert_pixel_height(10);
+    const float DEPTH = 0.9f;
+}

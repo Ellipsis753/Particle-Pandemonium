@@ -1,0 +1,42 @@
+#pragma once
+
+#define NO_SDL_GLEXT
+#include <GL/glew.h>
+#include <GL/gl.h>
+#include <random>
+
+#include "constParticleController.h"
+#include "Cvao.h"
+#include "constOpengl.h"
+#include "CshaderProgram.h"
+#include "Cloader.h"
+
+class CparticleController {
+    public:
+    CparticleController();
+    void draw_and_step();
+    void step();
+    bool make_ready_to_add();
+    void finish_adding();
+    void add_particle(float x, float y, float speedX, float speedY, float r, float g, float b);
+    void add_explosion_particle(Cloader &loader, float x, float y, float r, float g, float b, float speedOffsetX, float speedOffsetY);
+    void add_explosion_particle(Cloader &loader, float x, float y, float r, float g, float b);
+    void add_explosion_particle(Cloader &loader, float x, float y);
+
+    private:
+    CparticleController(const CparticleController&) = delete;
+    CparticleController& operator = (const CparticleController&) = delete;
+
+    bool init();
+
+    Cvao ping;
+    Cvao pong;
+    Cvao* active;
+    Cvao* inactive;
+    CshaderProgram program;
+    unsigned int frame;
+    int noFreeUnusedBefore;
+    int finalUsedIndex;
+    unsigned int particleDeathsFrames[PARTICLE_CONTROLLER::MAX_POINTS];
+    OPENGL::particlePoint* startOfActive;
+};

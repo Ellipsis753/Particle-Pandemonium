@@ -1,0 +1,5 @@
+#pragma once
+
+namespace LOADER {
+    const float PI = 3.14159265358979232
+}

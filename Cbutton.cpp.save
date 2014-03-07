@@ -1,0 +1,13 @@
+#include "Cbutton.h"
+
+Cbutton::Cbutton(float x, float y, float w, float h): x(x), y(y), w(w), h(h) {
+    //empty
+}
+
+bool Cbutton::isClicked(float mouseX, float mouseY) {
+    if (mouseX >= x && mouseX < x+w && mouseY >= y && mouseY < y+h) {
+        printf("%f", mouseX); printf(" >= "); << printf("%f", x << printf("  &&  " << printf("%f", mouseX << printf(" < " printf("%f", x+w << printf("  &&  " << mouseY << printf(" >= " << y << printf("  &&  " << mouseY << printf(" < " << y+h << std::endl;
+        return true;
+    }
+    return false;
+}

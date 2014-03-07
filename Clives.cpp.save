@@ -1,0 +1,8 @@
+#include "Clives.h"
+
+OPENGL::vanillaPoint* Clives::draw(unsigned int lives, Copengl &opengl, OPENGL::vanillaPoint* freeSpace) {
+    Ctext text;
+    freeSpace = text.draw_string(LIVES::TEXT, LIVES::X, LIVES::Y, opengl, freeSpace);
+
+    return text.draw_number(lives, LIVES::X+LIVES::LENGTH_OF_TEXT*opengl.convert_pixel_width(IMAGES::LETTERS::WIDTH+TEXT::SPACING), LIVES::Y, opengl, freeSpace, LIVES::PLACES);
+}

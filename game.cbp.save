@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Particle Pandemonium" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="Particle Pandemonium" prefix_auto="1" extension_auto="1" />
+				<Option object_output="/media/usb/codeblocks/programs/game/.objs" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++0x" />
+					<Add option="-g" />
+					<Add directory="../../glew-1.9.0/include/" />
+					<Add directory="../../SDL_image-1.2.12/include" />
+					<Add directory="../../SDL-1.2.15/include" />
+					<Add directory="../../glm-0.9.4.1" />
+					<Add directory="../../SDL_mixer-1.2.12/include/" />
+					<Add directory="../../SDL-1.2.15/include/SDL" />
+				</Compiler>
+				<Linker>
+					<Add option="-lmingw32" />
+					<Add option="-lglew32" />
+					<Add option="-lopenGL32" />
+					<Add option="-lSDLmain" />
+					<Add option="-lSDL" />
+					<Add option="-lSDL_image" />
+					<Add option="-lSDL_mixer" />
+					<Add directory="../../glew-1.9.0/lib" />
+					<Add directory="../../SDL-1.2.15/lib" />
+					<Add directory="../../SDL_image-1.2.12/lib" />
+					<Add directory="../../SDL_mixer-1.2.12/lib/" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/game" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="`sdl-config --cflags`" />
+					<Add option="-Ofast" />
+					<Add option="-ffast-math" />
+					<Add option="-funroll-loops" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="`sdl-config --libs`" />
+					<Add option="-lSDL_image" />
+					<Add option="-lGL" />
+					<Add option="-lGLEW" />
+					<Add option="-lSDL_mixer" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Winit-self" />
+			<Add option="-Wredundant-decls" />
+			<Add option="-Winline" />
+			<Add option="-Wswitch-default" />
+			<Add option="-Weffc++" />
+			<Add option="-std=c++0x" />
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="Cbomb.cpp" />
+		<Unit filename="Cbomb.h" />
+		<Unit filename="Cbombs.cpp" />
+		<Unit filename="Cbombs.h" />
+		<Unit filename="Cbullet.cpp" />
+		<Unit filename="Cbullet.h" />
+		<Unit filename="Cbutton.cpp" />
+		<Unit filename="Cbutton.h" />
+		<Unit filename="Cenemy.cpp" />
+		<Unit filename="Cenemy.h" />
+		<Unit filename="CenemyController.cpp" />
+		<Unit filename="CenemyController.h" />
+		<Unit filename="Cgame.cpp" />
+		<Unit filename="Cgame.h" />
+		<Unit filename="Cgameplay.cpp" />
+		<Unit filename="Cgameplay.h" />
+		<Unit filename="Clives.cpp" />
+		<Unit filename="Clives.h" />
+		<Unit filename="Cload.cpp" />
+		<Unit filename="Cload.h" />
+		<Unit filename="Cloader.cpp" />
+		<Unit filename="Cloader.h" />
+		<Unit filename="Close.cpp" />
+		<Unit filename="Close.h" />
+		<Unit filename="Cmenu.cpp" />
+		<Unit filename="Cmenu.h" />
+		<Unit filename="Copengl.cpp" />
+		<Unit filename="Copengl.h" />
+		<Unit filename="CparticleController.cpp" />
+		<Unit filename="CparticleController.h" />
+		<Unit filename="Cplayer.cpp" />
+		<Unit filename="Cplayer.h" />
+		<Unit filename="CplayerBullet.cpp" />
+		<Unit filename="CplayerBullet.h" />
+		<Unit filename="Cscore.cpp" />
+		<Unit filename="Cscore.h" />
+		<Unit filename="Cscoreboard.cpp" />
+		<Unit filename="Cscoreboard.h" />
+		<Unit filename="Csdl.cpp" />
+		<Unit filename="Csdl.h" />
+		<Unit filename="Cshader.cpp" />
+		<Unit filename="Cshader.h" />
+		<Unit filename="CshaderProgram.cpp" />
+		<Unit filename="CshaderProgram.h" />
+		<Unit filename="Csound.cpp" />
+		<Unit filename="Csound.h" />
+		<Unit filename="CstarController.cpp" />
+		<Unit filename="CstarController.h" />
+		<Unit filename="CstartGame.cpp" />
+		<Unit filename="CstartGame.h" />
+		<Unit filename="CstateManager.cpp" />
+		<Unit filename="CstateManager.h" />
+		<Unit filename="Ctext.cpp" />
+		<Unit filename="Ctext.h" />
+		<Unit filename="Ctutorial.cpp" />
+		<Unit filename="Ctutorial.h" />
+		<Unit filename="Cvao.cpp" />
+		<Unit filename="Cvao.h" />
+		<Unit filename="Cvbo.cpp" />
+		<Unit filename="Cvbo.h" />
+		<Unit filename="Cwin.cpp" />
+		<Unit filename="Cwin.h" />
+		<Unit filename="bulletPatternsAndEnemyMacros.h" />
+		<Unit filename="constBomb.h" />
+		<Unit filename="constBombs.h" />
+		<Unit filename="constBullet.h" />
+		<Unit filename="constEnemy.h" />
+		<Unit filename="constEnemyController.h" />
+		<Unit filename="constGameplay.h" />
+		<Unit filename="constImages.h" />
+		<Unit filename="constLives.h" />
+		<Unit filename="constLose.h" />
+		<Unit filename="constMenu.h" />
+		<Unit filename="constOpengl.h" />
+		<Unit filename="constParticleController.h" />
+		<Unit filename="constPlayer.h" />
+		<Unit filename="constPlayerBullet.h" />
+		<Unit filename="constScore.h" />
+		<Unit filename="constScoreboard.h" />
+		<Unit filename="constSdl.h" />
+		<Unit filename="constSounds.h" />
+		<Unit filename="constStarController.h" />
+		<Unit filename="constState.h" />
+		<Unit filename="constText.h" />
+		<Unit filename="constTutorial.h" />
+		<Unit filename="constVanilla.h" />
+		<Unit filename="constWin.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

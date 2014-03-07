@@ -1,0 +1,14 @@
+i686-pc-mingw32-g++ -Dmain=SDL_main *.cpp -I../../glew-1.9.0/include/ -I../../SDL_image-1.2.12/include/ -I../../SDL-1.2.15/include/SDL -I../../glm-0.9.4.1/ -I../../SDL_mixer-1.2.12/include/ -L../../glew-1.9.0/lib/ -L../../SDL-1.2.15/lib/ -L../../SDL_image-1.2.12/lib/ -L../../SDL_mixer-1.2.12/lib -lmingw32 -lglew32 -lopengl32 -lSDLmain -lSDL -lwinmm -mwindows -liconv -lm -luser32 -lgdi32 -lwinmm -ldxguid -lSDL_image -lSDL_mixer -std=c++0x 
+
+
+newer:
+
+i686-pc-mingw32-g++ -Dmain=SDL_main *.cpp -I../../freeglut/include/ -I../../glew-1.9.0/include/ -I../../SDL_image-1.2.12/include/ -I../../SDL-1.2.15/include/SDL -I../../glm-0.9.4.1/ -I../../SDL_mixer-1.2.12/include/ -L../../freeglut/lib/ -L../../glew-1.9.0/lib/ -L../../SDL-1.2.15/lib/ -L../../SDL_image-1.2.12/lib/ -L../../SDL_mixer-1.2.12/lib -lmingw32 -lfreeglut -lglew32 -lGLEW  -lopengl32 -lSDLmain -lSDL -lwinmm -mwindows -liconv -lm -luser32 -lgdi32 -lwinmm -ldxguid -lSDL_image -std=c++0x -g -pg -Wall -o particle.exe
+
+
+newest:
+
+i686-pc-mingw32-g++ -Wall -o particle.exe -std=c++0x *.cpp -I/usr/i686-mingw32/usr/include/ -L/usr/i686-mingw32/usr/lib/ `i686-pc-mingw32-sdl-config --cflags` `i686-pc-mingw32-sdl-config --libs` -lSDL_image -lSDL_ttf -lSDL_mixer -lGL -lglew32 -Ofast -ffast-math -fexpensive-optimizations -fomit-frame-pointer -s -funroll-loops
+
+
+i686-pc-mingw32-g++ -Wall -o particle.exe -std=c++0x *.cpp -I/usr/i686-mingw32/usr/include/ -L/usr/i686-mingw32/usr/lib/ `i686-pc-mingw32-sdl-config --cflags` `i686-pc-mingw32-sdl-config --libs` -lSDL_image -lSDL_mixer -lGL -lglew32 -Ofast -ffast-math -fexpensive-optimizations -fomit-frame-pointer -s -funroll-loops

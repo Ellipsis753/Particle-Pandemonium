@@ -1,0 +1,48 @@
+#include "CenemyController.h"
+
+CenemyController::CenemyController(): level(0), stepCount(0) {
+    //empty
+}
+
+bool CenemyController::step(std::vector<Cenemy*> &enemies) {
+    bool endOfLevel = false;
+    switch (level) {
+        case 1: {
+            endOfLevel = step_level_1(enemies);
+            break;
+        }
+
+        default: {
+            //This should never happen
+            fprintf(stderr, "Level controller set to non-existent level.\n");
+        }
+
+    }
+    stepCount++;
+    return endOfLevel;
+}
+
+bool CenemyController::step_level_1(std::vector<Cenemy*> &enemies) {
+    switch (stepCount) {
+        case 0: {
+            int foobarYes = 234234;
+            break;
+        }
+
+        default: {
+            //Do nothing
+            break;
+        }
+    }
+    return false;
+}
+
+void CenemyController::set_level(int level) {
+    this->level = level;
+    //reset the step counter to the start of that level
+    stepCount = 0;
+}
+
+int CenemyController::get_level() {
+    return level;
+}
